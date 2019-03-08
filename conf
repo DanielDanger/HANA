@@ -1,0 +1,10 @@
+// SAP HCP specific configuration
+const char* host = "iotmms<your_trial_user>trial.hanatrial.ondemand.com";
+String device_id = "<your_device_id>";
+String message_type_id = "<your_message_type_id>";
+String oauth_token="<your_oauth_token>";
+// ========== end configuration ============
+
+String url = "/com.sap.iotservices.mms/v1/api/http/data/" + device_id;
+// just an example payload corresponding to the other Starterkit examples
+String post_payload = "{\"mode\":\"async\", \"messageType\":\"" + message_type_id + "\", \"messages\":[{\"sensor\":\"sensor1\", \"value\":\"20\", \"timestamp\":1413191650}]}";
